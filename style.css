@@ -6,10 +6,10 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1e0b2e 0%, #3b1f5e 30%, #7b4faa 70%, #b8a0d4 100%);
+  background: linear-gradient(135deg, #f5f0ff 0%, #ede4ff 30%, #e0d4f5 70%, #f0eaff 100%);
   font-family: system-ui, -apple-system, sans-serif;
   padding: 2rem 1rem;
-  color: #f0e6ff;
+  color: #3d2a5c;
 }
 
 .container {
@@ -26,7 +26,7 @@ body {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.25);
+  border: 3px solid rgba(150, 100, 200, 0.2);
   margin-bottom: 1rem;
   object-fit: cover;
 }
@@ -35,28 +35,30 @@ h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
+  color: #2d1b4a;
 }
 
 .subtitle {
-  color: #d4b0ff;
+  color: #8b6bb0;
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .desc {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(60, 40, 90, 0.6);
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .section {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(180, 140, 220, 0.2);
   border-radius: 20px;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(150, 100, 200, 0.08);
 }
 
 .section h2 {
@@ -64,7 +66,7 @@ h1 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #d4b0ff;
+  color: #9b7dc1;
   margin-bottom: 1rem;
 }
 
@@ -75,12 +77,12 @@ h1 {
 }
 
 .tag {
-  background: rgba(180, 120, 255, 0.2);
-  border: 1px solid rgba(180, 120, 255, 0.25);
+  background: rgba(180, 140, 220, 0.12);
+  border: 1px solid rgba(180, 140, 220, 0.2);
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  color: #e6d0ff;
+  color: #5d3f7a;
 }
 
 .skills-grid {
@@ -92,7 +94,7 @@ h1 {
 .skill-group h3 {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #c8a8ff;
+  color: #8b6bb0;
   margin-bottom: 0.5rem;
 }
 
@@ -103,12 +105,12 @@ h1 {
 .skill-group li {
   font-size: 0.85rem;
   padding: 0.3rem 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(60, 40, 90, 0.7);
 }
 
 .skill-group li::before {
   content: "·";
-  color: #b080ff;
+  color: #b896d9;
   font-weight: bold;
   margin-right: 0.5rem;
 }
@@ -116,17 +118,17 @@ h1 {
 .edu-title {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #fff;
+  color: #2d1b4a;
 }
 
 .edu-meta {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(60, 40, 90, 0.55);
   margin-top: 0.2rem;
 }
 
 .empty {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(60, 40, 90, 0.3);
   font-size: 0.9rem;
   text-align: center;
 }
@@ -145,14 +147,14 @@ h1 {
   font-size: 0.9rem;
   font-weight: 500;
   text-align: center;
-  background: rgba(180, 120, 255, 0.15);
-  border: 1px solid rgba(180, 120, 255, 0.2);
-  color: #e6d0ff;
+  background: rgba(180, 140, 220, 0.1);
+  border: 1px solid rgba(180, 140, 220, 0.15);
+  color: #5d3f7a;
   transition: background 0.2s;
 }
 
 .links a:hover {
-  background: rgba(180, 120, 255, 0.3);
+  background: rgba(180, 140, 220, 0.2);
 }
 
 @media (min-width: 500px) {
