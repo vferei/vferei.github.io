@@ -180,83 +180,65 @@ h1 {
 
 .lilac {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
-  overflow: hidden;
 }
 
 .lb {
   position: absolute;
-  top: var(--top, 0);
-  left: var(--left, auto);
-  right: var(--right, auto);
-  width: calc(var(--len, 200) * 1px);
-  height: 80px;
   animation: sway 7s ease-in-out infinite;
 }
 
 .lb .stem {
   position: absolute;
-  top: 50%;
+  top: 22px;
   left: 0;
   width: 100%;
-  height: 3px;
-  margin-top: -1.5px;
-  background: linear-gradient(90deg, #3d2b1a, #5a3f28 40%, #6b4f35);
+  height: 4px;
+  background: linear-gradient(90deg, #3d2b1a, #5a3f28 40%, #7a5a3f);
   border-radius: 2px;
-  transform: rotate(calc(var(--angle, 0) * 1deg));
-  transform-origin: left center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .lv {
   position: absolute;
-  top: calc(50% + var(--y, 0) * 1px);
-  left: calc(var(--x, 0) * 1px);
-  width: calc(var(--s, 16) * 1px);
-  height: calc(var(--s, 16) * 0.5 * 1px);
   border-radius: 50% 0 50% 0;
-  background: linear-gradient(135deg, #4a7c59, #3d6b4e);
-  transform: rotate(calc(var(--r, 0) * 1deg));
-  opacity: 0.7;
+  background: linear-gradient(135deg, #4a7c59, #2d5a3a);
+  opacity: 0.75;
 }
 
 .lc {
   position: absolute;
-  top: calc(50% + var(--y, 0) * 1px);
-  left: calc(var(--x, 0) * 1px);
 }
 
 .lf {
   position: absolute;
-  width: 7px;
-  height: 7px;
-  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.4), var(--c, #a78bfa));
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5), var(--c));
   border-radius: 50%;
-  top: calc(var(--y, 0) * 1px);
-  left: calc(var(--x, 0) * 1px);
   box-shadow:
-    -3.5px -3.5px 0 var(--c, #a78bfa),
-    3.5px -3.5px 0 var(--c, #a78bfa),
-    -3.5px 3.5px 0 var(--c, #a78bfa),
-    3.5px 3.5px 0 var(--c, #a78bfa);
-  z-index: 1;
+    -5px -5px 0 var(--c),
+    5px -5px 0 var(--c),
+    -5px 5px 0 var(--c),
+    5px 5px 0 var(--c);
 }
 
 .bu {
   position: absolute;
-  width: 4px;
-  height: 5px;
-  background: var(--c, #5b21b6);
+  width: 5px;
+  height: 6px;
+  background: var(--c);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  top: calc(var(--y, 0) * 1px);
-  left: calc(var(--x, 0) * 1px);
   z-index: 2;
 }
 
 @keyframes sway {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-4px) rotate(1.5deg); }
+  33% { transform: translateY(-5px) rotate(1.5deg); }
   66% { transform: translateY(3px) rotate(-0.5deg); }
 }
