@@ -178,7 +178,7 @@ h1 {
   }
 }
 
-.flowers {
+.lilac {
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -186,167 +186,77 @@ h1 {
   overflow: hidden;
 }
 
-.bloom {
+.lb {
   position: absolute;
-  animation: float 10s ease-in-out infinite;
-}
-
-.bloom__petal {
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-}
-
-.bloom__center {
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-}
-
-.bloom__glow {
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
-}
-
-.b--1 {
-  width: 120px;
-  height: 120px;
-  top: -2%;
-  left: 50%;
-  margin-left: -60px;
-  animation-delay: 0s;
-}
-.b--1 .bloom__petal {
-  width: 50px;
-  height: 50px;
-  margin: -25px 0 0 -25px;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.08));
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.06);
-}
-.b--1 .bloom__petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(2) { transform: rotate(45deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(3) { transform: rotate(90deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(4) { transform: rotate(135deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(5) { transform: rotate(180deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(6) { transform: rotate(225deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(7) { transform: rotate(270deg) translateY(-40px); }
-.b--1 .bloom__petal:nth-child(8) { transform: rotate(315deg) translateY(-40px); }
-.b--1 .bloom__center { width: 22px; height: 22px; }
-.b--1 .bloom__glow { width: 140px; height: 140px; }
-
-.b--2 {
-  width: 90px;
-  height: 90px;
-  top: 12%;
-  right: 3%;
-  animation-delay: 2s;
-}
-.b--2 .bloom__petal {
-  width: 38px;
-  height: 38px;
-  margin: -19px 0 0 -19px;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.05));
-  box-shadow: 0 3px 15px rgba(255, 255, 255, 0.05);
-}
-.b--2 .bloom__petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(2) { transform: rotate(45deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(3) { transform: rotate(90deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(4) { transform: rotate(135deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(5) { transform: rotate(180deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(6) { transform: rotate(225deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(7) { transform: rotate(270deg) translateY(-30px); }
-.b--2 .bloom__petal:nth-child(8) { transform: rotate(315deg) translateY(-30px); }
-.b--2 .bloom__center { width: 16px; height: 16px; }
-.b--2 .bloom__glow { width: 110px; height: 110px; }
-
-.b--3 {
-  width: 100px;
-  height: 100px;
-  bottom: 8%;
-  left: 2%;
-  animation-delay: 4s;
-}
-.b--3 .bloom__petal {
-  width: 42px;
-  height: 42px;
-  margin: -21px 0 0 -21px;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.06));
-  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.05);
-}
-.b--3 .bloom__petal:nth-child(1) { transform: rotate(0deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(2) { transform: rotate(45deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(3) { transform: rotate(90deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(4) { transform: rotate(135deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(5) { transform: rotate(180deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(6) { transform: rotate(225deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(7) { transform: rotate(270deg) translateY(-35px); }
-.b--3 .bloom__petal:nth-child(8) { transform: rotate(315deg) translateY(-35px); }
-.b--3 .bloom__center { width: 18px; height: 18px; }
-.b--3 .bloom__glow { width: 120px; height: 120px; }
-
-.b--4 {
-  width: 70px;
-  height: 70px;
-  bottom: 35%;
-  right: 5%;
-  animation-delay: 1s;
-}
-.b--4 .bloom__petal {
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.04));
-  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.04);
-}
-.b--4 .bloom__petal:nth-child(1) { transform: rotate(0deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(2) { transform: rotate(45deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(3) { transform: rotate(90deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(4) { transform: rotate(135deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(5) { transform: rotate(180deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(6) { transform: rotate(225deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(7) { transform: rotate(270deg) translateY(-24px); }
-.b--4 .bloom__petal:nth-child(8) { transform: rotate(315deg) translateY(-24px); }
-.b--4 .bloom__center { width: 13px; height: 13px; }
-.b--4 .bloom__glow { width: 90px; height: 90px; }
-
-.b--5 {
-  width: 80px;
+  top: var(--top, 0);
+  left: var(--left, auto);
+  right: var(--right, auto);
+  width: calc(var(--len, 200) * 1px);
   height: 80px;
-  top: 40%;
-  left: 1%;
-  animation-delay: 3s;
+  animation: sway 7s ease-in-out infinite;
 }
-.b--5 .bloom__petal {
-  width: 34px;
-  height: 34px;
-  margin: -17px 0 0 -17px;
-  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.04));
-  box-shadow: 0 3px 14px rgba(255, 255, 255, 0.04);
-}
-.b--5 .bloom__petal:nth-child(1) { transform: rotate(0deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(2) { transform: rotate(45deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(3) { transform: rotate(90deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(4) { transform: rotate(135deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(5) { transform: rotate(180deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(6) { transform: rotate(225deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(7) { transform: rotate(270deg) translateY(-28px); }
-.b--5 .bloom__petal:nth-child(8) { transform: rotate(315deg) translateY(-28px); }
-.b--5 .bloom__center { width: 14px; height: 14px; }
-.b--5 .bloom__glow { width: 100px; height: 100px; }
 
-@keyframes float {
+.lb .stem {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin-top: -1.5px;
+  background: linear-gradient(90deg, #3d2b1a, #5a3f28 40%, #6b4f35);
+  border-radius: 2px;
+  transform: rotate(calc(var(--angle, 0) * 1deg));
+  transform-origin: left center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.lv {
+  position: absolute;
+  top: calc(50% + var(--y, 0) * 1px);
+  left: calc(var(--x, 0) * 1px);
+  width: calc(var(--s, 16) * 1px);
+  height: calc(var(--s, 16) * 0.5 * 1px);
+  border-radius: 50% 0 50% 0;
+  background: linear-gradient(135deg, #4a7c59, #3d6b4e);
+  transform: rotate(calc(var(--r, 0) * 1deg));
+  opacity: 0.7;
+}
+
+.lc {
+  position: absolute;
+  top: calc(50% + var(--y, 0) * 1px);
+  left: calc(var(--x, 0) * 1px);
+}
+
+.lf {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.4), var(--c, #a78bfa));
+  border-radius: 50%;
+  top: calc(var(--y, 0) * 1px);
+  left: calc(var(--x, 0) * 1px);
+  box-shadow:
+    -3.5px -3.5px 0 var(--c, #a78bfa),
+    3.5px -3.5px 0 var(--c, #a78bfa),
+    -3.5px 3.5px 0 var(--c, #a78bfa),
+    3.5px 3.5px 0 var(--c, #a78bfa);
+  z-index: 1;
+}
+
+.bu {
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  background: var(--c, #5b21b6);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: calc(var(--y, 0) * 1px);
+  left: calc(var(--x, 0) * 1px);
+  z-index: 2;
+}
+
+@keyframes sway {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-10px) rotate(2deg); }
-  66% { transform: translateY(5px) rotate(-1deg); }
+  33% { transform: translateY(-4px) rotate(1.5deg); }
+  66% { transform: translateY(3px) rotate(-0.5deg); }
 }
