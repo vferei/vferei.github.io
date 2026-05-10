@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Резюмешка</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="i18n.js"></script>
   <script defer src="script.js"></script>
 
 </head>
@@ -36,16 +37,17 @@
     <i class="petal" style="left:12%;--c:#7c3aed;--s:16px;--d:14s;--t:11s"></i>
     <i class="petal" style="left:50%;--c:#ffffff;--s:24px;--d:15s;--t:8s"></i>
   </div>
+  <button class="lang-btn" data-i18n="btn">EN</button>
   <div class="container">
     <header class="header">
       <img src="avatar.jpg" alt="Вероника Я." class="avatar" />
-      <h1>Вероника Я.</h1>
-      <p class="subtitle">PR-специалист</p>
-      <p class="desc">Помогаю брендам говорить с аудиторией на одном языке.</p>
+      <h1 data-i18n="name">Вероника Я.</h1>
+      <p class="subtitle" data-i18n="subtitle">PR-специалист</p>
+      <p class="desc" data-i18n="desc">Помогаю брендам говорить с аудиторией на одном языке.</p>
     </header>
 
     <section class="section">
-      <h2>Профессиональные области</h2>
+      <h2 data-i18n="areas">Профессиональные области</h2>
       <div class="tags">
         <span class="tag">PR</span>
         <span class="tag">SMM</span>
@@ -54,20 +56,20 @@
     </section>
 
     <section class="section">
-      <h2>Навыки</h2>
+      <h2 data-i18n="skills">Навыки</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>Профессиональные</h3>
+          <h3 data-i18n="prof">Профессиональные</h3>
           <ul>
-            <li>Написание пресс-релизов</li>
-            <li>Коммуникационная стратегия</li>
-            <li>Работа с медиа</li>
-            <li>Копирайтинг</li>
-            <li>Ведение соцсетей</li>
+            <li data-i18n="press">Написание пресс-релизов</li>
+            <li data-i18n="strategy">Коммуникационная стратегия</li>
+            <li data-i18n="media">Работа с медиа</li>
+            <li data-i18n="copy">Копирайтинг</li>
+            <li data-i18n="smm">Ведение соцсетей</li>
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Общие</h3>
+          <h3 data-i18n="general">Общие</h3>
           <ul>
             <li>Microsoft Excel</li>
             <li>Microsoft Word</li>
@@ -80,36 +82,36 @@
     </section>
 
     <section class="section">
-      <h2>Языки</h2>
+      <h2 data-i18n="langs_title">Языки</h2>
       <div class="langs">
-        <div class="lang"><span class="lang__label">Русский</span><div class="lang__bar"><div class="lang__fill" style="--w:100%"></div></div></div>
-        <div class="lang"><span class="lang__label">Английский</span><div class="lang__bar"><div class="lang__fill" style="--w:85%"></div></div></div>
-        <div class="lang"><span class="lang__label">Китайский</span><div class="lang__bar"><div class="lang__fill" style="--w:55%"></div></div></div>
-        <div class="lang"><span class="lang__label">Французский</span><div class="lang__bar"><div class="lang__fill" style="--w:30%"></div></div></div>
+        <div class="lang"><span class="lang__label" data-i18n="lang_ru_label">Русский</span><div class="lang__bar"><div class="lang__fill" style="--w:100%"></div></div></div>
+        <div class="lang"><span class="lang__label" data-i18n="lang_en_label">Английский</span><div class="lang__bar"><div class="lang__fill" style="--w:85%"></div></div></div>
+        <div class="lang"><span class="lang__label" data-i18n="lang_cn_label">Китайский</span><div class="lang__bar"><div class="lang__fill" style="--w:55%"></div></div></div>
+        <div class="lang"><span class="lang__label" data-i18n="lang_fr_label">Французский</span><div class="lang__bar"><div class="lang__fill" style="--w:30%"></div></div></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Образование</h2>
+      <h2 data-i18n="edu">Образование</h2>
       <div class="edu-item">
-        <p class="edu-title">МГИМО (У) МИД России</p>
-        <p class="edu-meta">Связи с общественностью и международное энергетическое сотрудничество</p>
-        <p class="edu-meta">2025–2029</p>
+        <p class="edu-title" data-i18n="edu_place">МГИМО (У) МИД России</p>
+        <p class="edu-meta" data-i18n="edu_prog">Связи с общественностью и международное энергетическое сотрудничество</p>
+        <p class="edu-meta" data-i18n="edu_years">2025–2029</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Курсы</h2>
+      <h2 data-i18n="courses">Курсы</h2>
       <p class="empty">—</p>
     </section>
 
     <section class="section">
-      <h2>Опыт работы</h2>
+      <h2 data-i18n="exp">Опыт работы</h2>
       <p class="empty">—</p>
     </section>
 
     <section class="section contact">
-      <h2>Контакты</h2>
+      <h2 data-i18n="contacts">Контакты</h2>
       <div class="links">
         <a href="https://github.com/vferei" target="_blank">GitHub</a>
         <a href="https://t.me/vferei" target="_blank">Telegram</a>
