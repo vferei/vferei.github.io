@@ -222,51 +222,59 @@ h1 {
   100% { transform: translateY(105vh) rotate(360deg) translateX(0);     opacity: 0;   }
 }
 
-.rings {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.ring {
+.lang-list {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+}
+
+.lang-item {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  width: 100px;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.ring__svg {
+.lang-item:last-child {
+  border-bottom: none;
+}
+
+.lang-item__name {
   width: 90px;
-  height: 90px;
-  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.ring__track {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.06);
-  stroke-width: 8;
+.lang-item__level {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #a78bfa;
 }
 
-.ring__fill {
-  fill: none;
-  stroke: #a78bfa;
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-dasharray: 301.6;
-  stroke-dashoffset: 301.6;
-  transition: stroke-dashoffset 1.2s ease;
+.lang-item__dots {
+  display: flex;
+  gap: 4px;
 }
 
-.section.visible .ring__fill {
-  stroke-dashoffset: calc(301.6 - 301.6 * var(--pct));
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
 }
 
-.ring__label {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
+.dot.on {
+  background: #a78bfa;
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.4);
+}
+
+.dot.off {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes ripple {
+  to { transform: scale(3); opacity: 0; }
 }
 
 .lang-btn {

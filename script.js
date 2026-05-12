@@ -57,36 +57,28 @@ avatar?.addEventListener('mouseleave', () => {
   avatar.style.transition = 'transform 0.4s';
 });
 
-// печатающийся subtitle при загрузке
-const subEl = document.querySelector('.subtitle');
-if (subEl && !subEl.dataset.i18n) {
-  const text = subEl.textContent;
-  subEl.textContent = '';
-  let i = 0;
-  function typeSub() {
-    if (i < text.length) {
-      subEl.textContent += text[i];
-      i++;
-      setTimeout(typeSub, 40);
-    }
-  }
-  setTimeout(typeSub, 600);
-}
+// приветствие по времени
+const greeting = document.createElement('span');
+greeting.style.cssText = 'display:block;font-size:0.85rem;color:rgba(255,255,255,0.4);margin-top:0.5rem';
+const hour = new Date().getHours();
+let greetText = '🌙';
+if (hour >= 6 && hour < 12) greetText = '☀️ Доброе утро';
+else if (hour >= 12 && hour < 18) greetText = '☀️ Добрый день';
+else if (hour >= 18 && hour < 23) greetText = '🌅 Добрый вечер';
+else greetText = '🌙 Доброй ночи';
+greeting.textContent = greetText;
+document.querySelector('.desc')?.after(greeting);
 
-// обновляем typewriter при смене языка
-document.addEventListener('langchange', () => {
-  const sub = document.querySelector('.subtitle');
-  if (sub) {
-    const text = sub.textContent;
-    sub.textContent = '';
-    let i = 0;
-    function typeSub() {
-      if (i < text.length) {
-        sub.textContent += text[i];
-        i++;
-        setTimeout(typeSub, 30);
-      }
-    }
-    setTimeout(typeSub, 100);
-  }
+// ripple-эффект по клику на секции
+sections.forEach((s) => {
+  s.addEventListener('click', (e) => {
+    const ripple = document.createElement('span');
+    const r = Math.max(s.offsetWidth, s.offsetHeight);
+    const rect = s.getBoundingClientRect();
+    ripple.style.cssText = `position:absolute;width:${r}px;height:${r}px;border-radius:50%;background:rgba(255,255,255,0.06);left:${e.clientX - rect.left - r/2}px;top:${e.clientY - rect.top - r/2}px;pointer-events:none;animation:ripple 0.6s ease-out forwards`;
+    s.style.position = 'relative';
+    s.style.overflow = 'hidden';
+    s.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
 });
