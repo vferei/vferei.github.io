@@ -57,18 +57,6 @@ avatar?.addEventListener('mouseleave', () => {
   avatar.style.transition = 'transform 0.4s';
 });
 
-// приветствие по времени
-const greeting = document.createElement('span');
-greeting.style.cssText = 'display:block;font-size:0.85rem;color:rgba(255,255,255,0.4);margin-top:0.5rem';
-const hour = new Date().getHours();
-let greetText = '🌙';
-if (hour >= 6 && hour < 12) greetText = '☀️ Доброе утро';
-else if (hour >= 12 && hour < 18) greetText = '☀️ Добрый день';
-else if (hour >= 18 && hour < 23) greetText = '🌅 Добрый вечер';
-else greetText = '🌙 Доброй ночи';
-greeting.textContent = greetText;
-document.querySelector('.desc')?.after(greeting);
-
 // ripple-эффект по клику на секции
 sections.forEach((s) => {
   s.addEventListener('click', (e) => {
