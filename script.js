@@ -42,3 +42,51 @@ emailLink?.addEventListener('click', (e) => {
     setTimeout(() => tip.remove(), 1500);
   });
 });
+
+// параллакс на аватаре
+const avatar = document.querySelector('.avatar');
+avatar?.addEventListener('mousemove', (e) => {
+  const rect = avatar.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width - 0.5;
+  const y = (e.clientY - rect.top) / rect.height - 0.5;
+  avatar.style.transform = `perspective(300px) rotateY(${x * 10}deg) rotateX(${y * -10}deg) scale(1.05)`;
+  avatar.style.transition = 'transform 0.05s';
+});
+avatar?.addEventListener('mouseleave', () => {
+  avatar.style.transform = '';
+  avatar.style.transition = 'transform 0.4s';
+});
+
+// печатающийся subtitle при загрузке
+const subEl = document.querySelector('.subtitle');
+if (subEl && !subEl.dataset.i18n) {
+  const text = subEl.textContent;
+  subEl.textContent = '';
+  let i = 0;
+  function typeSub() {
+    if (i < text.length) {
+      subEl.textContent += text[i];
+      i++;
+      setTimeout(typeSub, 40);
+    }
+  }
+  setTimeout(typeSub, 600);
+}
+
+// обновляем typewriter при смене языка
+document.addEventListener('langchange', () => {
+  const sub = document.querySelector('.subtitle');
+  if (sub) {
+    const text = sub.textContent;
+    sub.textContent = '';
+    let i = 0;
+    function typeSub() {
+      if (i < text.length) {
+        sub.textContent += text[i];
+        i++;
+        setTimeout(typeSub, 30);
+      }
+    }
+    setTimeout(typeSub, 100);
+  }
+});

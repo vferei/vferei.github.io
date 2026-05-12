@@ -93,5 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
   applyLang(currentLang);
   document.querySelector('[data-i18n="btn"]')?.addEventListener('click', () => {
     applyLang(currentLang === 'ru' ? 'en' : 'ru');
+    document.dispatchEvent(new Event('langchange'));
   });
 });
