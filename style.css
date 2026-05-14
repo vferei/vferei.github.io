@@ -10,7 +10,7 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   padding: 2rem 1rem;
   color: #f0e8ff;
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32'%3E%3Crect x='9' y='10' width='4' height='18' rx='2' fill='%238B4513'/%3E%3Ccircle cx='11' cy='7' r='5' fill='%23a78bfa' opacity='0.5'/%3E%3Ccircle cx='11' cy='4' r='3' fill='%23f0e6ff'/%3E%3C/svg%3E") 11 4, auto;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='6' r='5.5' fill='%23c4b5fd' opacity='0.75'/%3E%3Ccircle cx='6' cy='11' r='5.5' fill='%23a78bfa' opacity='0.75'/%3E%3Ccircle cx='22' cy='11' r='5.5' fill='%23a78bfa' opacity='0.75'/%3E%3Ccircle cx='9' cy='21' r='5.5' fill='%23c4b5fd' opacity='0.75'/%3E%3Ccircle cx='19' cy='21' r='5.5' fill='%23a78bfa' opacity='0.75'/%3E%3Ccircle cx='14' cy='14' r='4' fill='%23f5f0ff'/%3E%3C/svg%3E") 14 14, auto;
 }
 
 .container {
@@ -127,7 +127,7 @@ h1 {
   padding: 0.3rem 0;
   color: rgba(255, 255, 255, 0.7);
   transition: transform 0.2s, color 0.2s;
-  cursor: default;
+  cursor: inherit;
 }
 
 .skill-group li:hover {
@@ -239,6 +239,7 @@ h1 {
   gap: 0.75rem;
   padding: 0.6rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: inherit;
 }
 
 .lang-item:last-child {
