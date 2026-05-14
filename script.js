@@ -16,7 +16,7 @@ sections.forEach((section) => observer.observe(section));
 const toTop = document.createElement('button');
 toTop.textContent = '↑';
 toTop.setAttribute('aria-label', 'Наверх');
-toTop.style.cssText = 'position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:0;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);color:#e6d4ff;font-size:1.4rem;cursor:pointer;z-index:99;opacity:0;transition:opacity 0.3s;pointer-events:none';
+toTop.style.cssText = 'position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:0;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);color:#e6d4ff;font-size:1.4rem;cursor:inherit;z-index:99;opacity:0;transition:opacity 0.3s;pointer-events:none';
 document.body.appendChild(toTop);
 
 window.addEventListener('scroll', () => {
