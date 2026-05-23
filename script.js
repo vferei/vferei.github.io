@@ -66,7 +66,27 @@ sections.forEach((s) => {
     ripple.style.cssText = `position:absolute;width:${r}px;height:${r}px;border-radius:50%;background:rgba(255,255,255,0.06);left:${e.clientX - rect.left - r/2}px;top:${e.clientY - rect.top - r/2}px;pointer-events:none;animation:ripple 0.6s ease-out forwards`;
     s.style.position = 'relative';
     s.style.overflow = 'hidden';
-    s.appendChild(ripple);
     setTimeout(() => ripple.remove(), 600);
   });
 });
+
+// сердечки при клике на пустое место
+const heartColors = ['#ffffff', '#c4b5fd', '#e6d4ff', '#a78bfa', '#7c3aed', '#d8b4fe'];
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.section') || e.target.closest('button') || e.target.closest('a')) return;
+  const heart = document.createElement('span');
+  heart.textContent = '♥';
+  const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+  const size = 16 + Math.random() * 20;
+  heart.style.cssText = `position:fixed;left:${e.clientX}px;top:${e.clientY}px;font-size:${size}px;color:${color};pointer-events:none;z-index:999;animation:heartFloat 1.8s ease-out forwards`;
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 1800);
+});
+
+if (!document.getElementById('heart-style')) {
+  const style = document.createElement('style');
+  style.id = 'heart-style';
+  style.textContent = `@keyframes heartFloat { 0% { transform: translateY(0) scale(0.5); opacity: 0.8; } 100% { transform: translateY(-120px) scale(1.2); opacity: 0; } }`;
+  document.head.appendChild(style);
+}
